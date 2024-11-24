@@ -6,7 +6,7 @@
     text-align: center;
     background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
   }
   
   .feedback-container h2 {
@@ -22,11 +22,11 @@
   }
   
   .feedback-card {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 8%);
   }
   
   .client-name {
@@ -42,7 +42,7 @@
   }
   
   .client-rating {
-    color: #ffbb00;
+    color: #fb0;
     font-size: 18px;
   }
   

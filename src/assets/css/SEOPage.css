@@ -1,0 +1,150 @@
+.seo-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.seo-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.seo-example img{
+  height: 350px;
+}
+.seo-header h1 {
+  color: black;
+  font-size: 4rem;
+}
+
+.seo-header h2 {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.seo-benefits,
+.seo-plans,
+.seo-example {
+  margin-bottom: 30px;
+}
+
+.seo-benefits ul,
+.seo-plans ul {
+  list-style: none;
+  padding: 0;
+}
+
+.seo-benefits li,
+.seo-plans li {
+  margin-bottom: 10px;
+}
+
+.plan {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.plan h4 {
+  color: #0073e6;
+}
+
+.seo-chart {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.seo-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.seo-main-header {
+  font-size: 2.5rem; /* Adjust font size for the header */
+  font-weight: 700; /* Bold */
+  line-height: 1.2; /* Adjust line height */
+  color: #000; /* Black color */
+}
+
+.seo-subheader {
+  font-size: 1rem; /* Adjust font size for the subheader */
+  font-weight: 400; /* Regular */
+  color: #555; /* Slightly gray color */
+  margin-top: 10px; /* Add some space below the main header */
+}
+
+/* Benefits Section */
+.seo-benefits {
+  background-color: #ea1d6f; /* Light purple background */
+  padding: 30px; /* Add padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center-align the text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+  margin-bottom: 50px;
+  transform: translateY(20px); /* Start slightly below */
+  animation: fadeInSlideUp 1s ease-out forwards; /* Trigger animation */
+}
+
+.benefits-title {
+  font-size: 1.8rem; /* Slightly larger font for the title */
+  font-weight: 600; /* Bold font */
+  color: #ddd; /* Darker text color for better contrast */
+  margin-bottom: 20px; /* Space between title and content */
+  animation: textZoomIn 1s ease-out forwards; /* Add a zoom-in effect */
+}
+@keyframes textZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9); /* Start slightly smaller */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* End at normal size */
+  }
+}
+.benefits-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding from the list */
+  animation: fadeInDelay 1s ease-out forwards; /* Staggered fade-in */
+}
+
+.benefits-list li {
+  font-size: 1rem; /* Standard font size */
+  color: #ddd; /* Subtle gray text */
+  margin-bottom: 10px; /* Space between items */
+  line-height: 1.5; /* Improve readability */
+ 
+  transform: translateY(10px);
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+.benefits-list li strong {
+  font-weight: bold; /* Make key points bold */
+  color: #222; /* Darker color for emphasis */
+}
+.grey button{
+  background-color: #c03afe !important;
+}
+.highlighted-header{
+background-color: #ea1d6f !important;
+}
+
+/* Add delay to each list item */
+.benefits-list li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.benefits-list li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.benefits-list li:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+@media (width <= 768px){
+ .benefits-list li{
+  text-align: start;
+ }
+}

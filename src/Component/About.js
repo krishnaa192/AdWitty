@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/fontawesome.css';
 import '../assets/css/templatemo-tale-seo-agency.css';
 import '../assets/css/owl.css';
-import '../assets/css/animate.css';
+
 import { Link } from 'react-router-dom';
 
 

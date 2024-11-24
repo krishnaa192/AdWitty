@@ -25,19 +25,14 @@ const Header = () => {
                         {showDropdown && (
                             <div className='services-dropdown'>
                                 <div className='services-dropdown-item'>
-                                    <p>Service 1</p>
-                                    <a href='#'>SEO - Boost Your Site</a>
-                                    <a href='#'>Social Media Marketing</a>
-                                    <a href='#'>Content Creation </a>
-                                    <a href='#'>PPC - Drive Traffic</a>
+                                    
+                                    <a href='/services/seo'>Start Ranking Higher Today – Explore Our SEO Plans!”</a>
+                                    <a href='#'>“Grow Your Social Presence – Let’s Start Now!”</a>
+                                    <a href='#'>Google My Business </a>
+                                    <a href='/services/webdev'>Get Your Dream Website – Book a Free Consultation Now!”</a>
+                                    <a href='#'>Boost Your Campaign ROI – Talk to Our Experts!”</a>
                                 </div>
-                                <div className='services-dropdown-item'>
-                                    <p>Service 2</p>
-                                    <a href='#'>SEO - Boost Your Site</a>
-                                    <a href='#'>Social Media Marketing</a>
-                                    <a href='#'>Content Creation</a>
-                                    <a href='#'>PPC - Drive Traffic</a>
-                                </div>
+                                
                             </div>
                         )}
                     </div>

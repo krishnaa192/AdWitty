@@ -6,6 +6,8 @@ import ContactPage from './Pages/ContactPage';
 import About from './Pages/AboutPage';
 import FeedbackPage from './Pages/FeedbackPage';
 import HomePage from './Pages/HomePage';
+import SEOPage from './Pages/SEOPage';
+import WebDevPage from './Pages/WebDevPage';
 
 function App() {
   return (
@@ -15,6 +17,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path='/contact' element={<ContactPage/>}/>
         <Route path='/feedback' element={<FeedbackPage/>}/>
+        <Route path='/services/seo' element={<SEOPage/>}/>
+        <Route path='/services/webdev' element={<WebDevPage/>}/>
+
       </Routes>
     </Router>
   );

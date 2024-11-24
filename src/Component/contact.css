@@ -1,4 +1,4 @@
-*, *:before, *:after {
+*, *::before, *::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -10,7 +10,7 @@
   }
   
   body, button, input {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 700;
     letter-spacing: 1.4px;
   }
@@ -31,16 +31,13 @@
     border-radius: 15px;
   }
   
-  .screen:after {
+  .screen::after {
     content: '';
     display: block;
     position: absolute;
-    top: 0;
-    left: 20px;
-    right: 20px;
-    bottom: 0;
+    inset: 0 20px;
     border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    box-shadow: 0 20px 40px rgb(0 0 0 / 40%);
     z-index: -1;
   }
   
@@ -112,7 +109,7 @@
     font-size: 26px;
   }
   
-  .app-title:after {
+  .app-title::after {
     content: '';
     display: block;
     position: absolute;
@@ -162,6 +159,7 @@
   .app-form-control:focus {
     border-bottom-color: #ddd;
   }
+
   /* Style for textarea as a larger text box */
 textarea.app-form-control {
     width: 100%;
@@ -224,7 +222,7 @@ textarea.app-form-control {
     margin: 0 5px;
   }
   
-  @media screen and (max-width: 520px) {
+  @media screen and (width <= 520px) {
     .screen-body {
       flex-direction: column;
     }
@@ -241,12 +239,12 @@ textarea.app-form-control {
       margin-right: 12px;
     }
   
-    .app-title:after {
+    .app-title::after {
       display: none;
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (width <= 600px) {
     .screen-body {
       padding: 40px;
     }
@@ -286,7 +284,6 @@ textarea.app-form-control {
   }
   
   .textContainer {
-    
     border-radius: 10px;
     color: #fff;
     width: 70%; 
@@ -307,7 +304,6 @@ textarea.app-form-control {
   .orangeLine {
     width: 80px;
     height: 4px;
-    
     margin: 10px auto;
   }
   
