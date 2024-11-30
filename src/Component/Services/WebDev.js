@@ -1,12 +1,9 @@
 import React from 'react';
-import '../assets/css/SEOPage.css'; // Add custom styles here
+import '../../assets/css/SEOPage.css'; // Add custom styles here
 import { PricingTable, PricingSlot, PricingDetail } from 'react-pricing-table';
 
 
 const WebDev = () => {
-  const handleSignup = (plan) => {
-    alert(`You selected the ${plan} plan!`);
-  };
 
   return (
     <div className="seo-page">
@@ -33,7 +30,7 @@ const WebDev = () => {
         <h3>Plans & Pricing</h3>
         <PricingTable highlightColor="#1976D2">
           <PricingSlot
-            onClick={() => handleSignup('Starter')}
+            onClick={() => window.open('/contact', '_blank')}
             buttonText="Book an Appointment"
             title="Basic Website Plan:"
             priceText="₹25,000"
@@ -45,7 +42,7 @@ const WebDev = () => {
           </PricingSlot>
           <PricingSlot
             highlighted
-            onClick={() => handleSignup('Standard')}
+            onClick={() => window.open('/contact', '_blank')}
             buttonText="Standard Website Plan"
             title="Standard SEO Plan"
             priceText="₹50,000/month"
@@ -56,7 +53,7 @@ const WebDev = () => {
             <PricingDetail>Upto 10 Pages.</PricingDetail>
           </PricingSlot>
           <PricingSlot
-            onClick={() => handleSignup('Premium')}
+      onClick={() => window.open('/contact', '_blank')}
             buttonText="Book an Appointment"
             title="Premium Website Plan"
             priceText="₹80,000/month"

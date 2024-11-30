@@ -39,7 +39,10 @@ const Body = () => {
       <div className='content'>
         <div className='content-page'>
           <div className='banner'>
-            Banner will be used here
+           <img src={`${process.env.PUBLIC_URL}/Image/1.jpg`}
+           alt='banner' />
+          
+
           </div>
         
       <div className="main-banner" id="top">

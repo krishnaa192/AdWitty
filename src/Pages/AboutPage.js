@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Component/header'
-import {FooterComp} from '../Component/FooterComp'
+import Footer from '../Component/Foot';
 import About from '../Component/About'
 
 const AboutPage = () => {
@@ -8,7 +8,7 @@ const AboutPage = () => {
     <div>
         <Header/>
         <About/>
-        <FooterComp/>
+        <Footer/>
       
     </div>
   )

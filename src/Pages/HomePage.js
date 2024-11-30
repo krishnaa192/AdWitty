@@ -1,13 +1,14 @@
 import React from 'react'
 import Header from '../Component/header';
 import Body from '../Component/bodypage';
-import {FooterComp} from '../Component/FooterComp';
+import Footer from '../Component/Foot';
+
 const HomePage = () => {
   return (
     <div>
         <Header/>
         <Body/>
-        <FooterComp/>
+        <Footer/>
       
     </div>
   )

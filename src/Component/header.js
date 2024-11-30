@@ -21,16 +21,16 @@ const Header = () => {
                         onMouseEnter={() => setShowDropdown(true)}
                         onMouseLeave={() => setShowDropdown(false)}
                     >
-                        <a href='#'>Services</a>
+                        <a href='/services/seo'>Services</a>
                         {showDropdown && (
                             <div className='services-dropdown'>
                                 <div className='services-dropdown-item'>
                                     
                                     <a href='/services/seo'>Start Ranking Higher Today – Explore Our SEO Plans!”</a>
-                                    <a href='#'>“Grow Your Social Presence – Let’s Start Now!”</a>
-                                    <a href='#'>Google My Business </a>
+                                    <a href='/services/social-media'>“Grow Your Social Presence – Let’s Start Now!”</a>
+                                    <a href='/services/google-my-business'>Google My Business </a>
                                     <a href='/services/webdev'>Get Your Dream Website – Book a Free Consultation Now!”</a>
-                                    <a href='#'>Boost Your Campaign ROI – Talk to Our Experts!”</a>
+                                    <a href='/services/performance-marketing'>Boost Your Campaign ROI – Talk to Our Experts!”</a>
                                 </div>
                                 
                             </div>

@@ -1,17 +1,17 @@
 import React from 'react'
-import SEO from '../Component/Services/SEO'
+import SocialMedia from '../Component/Services/SocialMedia'
 import Header from '../Component/header'
 import Footer from '../Component/Foot';
 
-const SEOPage = () => {
+const Social = () => {
   return (
    <>
     <Header />
-   <SEO />
+   <SocialMedia/>
   
    <Footer />
    </>
   )
 }
 
-export default SEOPage
+export default Social

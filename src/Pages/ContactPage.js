@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Component/header'
-import {FooterComp} from '../Component/FooterComp'
+import Footer from '../Component/Foot';
 import Contact from '../Component/Contact'
 
 const ContactPage = () => {
@@ -8,7 +8,7 @@ const ContactPage = () => {
     <div>
         <Header/>
         <Contact/>
-        <FooterComp/>
+        <Footer/>
     </div>
   )
 }
