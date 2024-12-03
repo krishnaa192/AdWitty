@@ -9,7 +9,7 @@ const Header = () => {
         <div className='navbar-main'>
             <div className='header-nav'>
                 <div className='nav-logo'>
-                    <img src='/image/adwitty.png' alt='Logo' />
+                    <img src='/image/blob.png' alt='Logo' />
                 </div>
                 <div
                     className={`nav-links ${menuOpen ? 'open' : ''}`}
@@ -38,9 +38,9 @@ const Header = () => {
                     </div>
                     {/* <a href='#'>Clients</a> */}
                     <a href='/contact'>Contact</a>
-                    <a href='/feedback'>
+                    {/* <a href='/feedback'>
                         What They Said!
-                    </a>
+                    </a> */}
                 </div>
                
                 {/* Hamburger Icon */}
