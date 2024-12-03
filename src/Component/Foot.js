@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="footer__columns">
           <div className="footer__col">
             <h3 className="footer__col-title">
-              <i data-feather="shopping-bag"></i> <span>services</span>
+              <i data-feather="shopping-bag"></i> <span>    Services</span>
             </h3>
             <nav className="footer__nav">
               <ul className="footer__nav-list">

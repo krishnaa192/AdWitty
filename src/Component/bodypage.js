@@ -4,6 +4,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import { Link } from 'react-router-dom';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { FaRegCalendarAlt, FaIndustry, FaChartLine, FaRocket } from "react-icons/fa";
 
 const itemData = [
   {
@@ -33,19 +34,80 @@ const itemData = [
   
   
 ];
+const cards = [
+  {
+    id: 1,
+    icon: <FaRegCalendarAlt />,
+    number: 1,
+    text: "Established in 2024, we are here to bring digital revolution in  industry experience",
+    color: "#FFD700",
+  },
+  {
+    id: 2,
+    icon: <FaIndustry />,
+    number: 7,
+    text: "We've served clients across various industries",
+    color: "#FF69B4",
+  },
+  {
+    id: 3,
+    icon: <FaChartLine />,
+    number: 4,
+    text: "A proven track record with a high retention rate",
+    color: "#00BFFF",
+  },
+  {
+    id: 4,
+    icon: <FaRocket />,
+    number: 1,
+    text: "Experience up to 7x revenue growth with Adwitty",
+    color: "#8A2BE2",
+  },
+];
+
+const values = [
+  {
+    title: "WE ARE YOUR PARTNER, NOT YOUR VENDOR",
+    description:
+      "It takes consistent collaboration to arrive at impactful solutions. We love working together with our clients to make that happen, leveraging their experiences with our expertise to create something worth sharing.",
+  },
+  {
+    title: "WE CARE TOO MUCH TO PRETEND WE DON’T",
+    description:
+      "We simply can’t help ourselves from combing through the details. Transparency and honesty are equally important to us—we’ll let you know what you’re thinking, when we’re thinking it.",
+  },
+  
+  {
+    title: "WE UNDERSTAND BEFORE WE EXECUTE",
+    description:
+      "Measure twice, cut once. It works for carpenters, and it works for us. We strive to understand every side of the problem so we can develop accurate, holistic solutions.",
+  },
+  {
+    title: "WE LEAD WITH INCLUSION",
+    description:
+      "We seek diverse perspectives and viewpoints to grow our understanding of the world around us. As we leverage and celebrate these personal experiences and cultures, we can more easily find powerful solutions to the problems that matter.",
+  },
+  {
+    title: "WE CARE TOO MUCH TO PRETEND WE DON’T",
+    description:
+      "We simply can’t help ourselves from combing through the details. Transparency and honesty are equally important to us—we’ll let you know what you’re thinking, when we’re thinking it.",
+  },
+  {
+    title: "NO EGO, ONLY IMPACT",
+    description:
+      "No task is beneath us. We seek to make a positive difference, no matter what that looks like or who gets the job done.",
+  },
+];
 const Body = () => {
   return (
     <>
       <div className='content'>
         <div className='content-page'>
           <div className='banner'>
-           <img src={`${process.env.PUBLIC_URL}/Image/1.jpg`}
+           <img src={`${process.env.PUBLIC_URL}/Image/banner1.jpg`}
            alt='banner' />
-          
-
-          </div>
-        
-      <div className="main-banner" id="top">
+    </div>
+    <div className="main-banner" id="top">
         <div className="container">
           <div className="row">
             <div className="col-lg-7">
@@ -56,9 +118,9 @@ const Body = () => {
                 <p>
                 orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                 </p>
-                <div className="main-button scroll-to-section"><Link to="#services">Discover More</Link></div>
-                <span>or</span>
-                <div className="second-button"><Link to="/faqs">Check our FAQs</Link></div>
+                <div className="main-button scroll-to-section"><Link to="/services/performance-marketing">Discover More</Link></div>
+               
+            
               </div>
             </div>
           </div>
@@ -74,7 +136,7 @@ const Body = () => {
                   <div className="section-heading">
                     <h2>We Provide <em>Different Services</em> &amp; <span>Features</span> For Your Agency</h2>
                     <div className="line-dec"></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p>
+                    <p>From starting business to a great growth we provide all the services that you need to grow your business.</p>
                   </div>
                 </div>
                 <div className="col-lg-6 col-sm-6">
@@ -122,11 +184,22 @@ const Body = () => {
               <div className="section-heading">
                 <h2>Discover Our <em>Work</em> &amp; <span>Projects</span></h2>
                 <div className="line-dec"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p>
+                {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p> */}
               </div>
             </div>
           </div> 
         </div>
+        <div className="info-cards">
+      {cards.map((card) => (
+        <div className="card" key={card.id}>
+          <div className="icon" style={{ color: card.color }}>
+            {card.icon}
+          </div>
+          <h2>{card.number}</h2>
+          <p>{card.text}</p>
+        </div>
+      ))}
+    </div>
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-12">
@@ -194,7 +267,7 @@ const Body = () => {
                     <div className="section-heading">
                       <h2>More <em>About Us</em> &amp; What <span>We Offer</span></h2>
                       <div className="line-dec"></div>
-                      <p>You are free to use this template for any purpose. You are not allowed to redistribute the downloadable ZIP file of Tale SEO Template on any other template website. Please contact us. Thank you.</p>
+                      {/* <p>You are free to use this template for any purpose. You are not allowed to redistribute the downloadable ZIP file of Tale SEO Template on any other template website. Please contact us. Thank you.</p> */}
                     </div>
                     <div className="skills">
                       <div className="skill-slide marketing">
@@ -218,7 +291,7 @@ const Body = () => {
                         <span>95%</span>
                       </div>
                     </div>
-                    <p className="more-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et dolore dolor dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p>
+                    {/* <p className="more-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et dolore dolor dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p> */}
                   </div>
                 </div>
               </div>
@@ -226,9 +299,6 @@ const Body = () => {
           </div>
         </div>
       </div>
-
-    
-    
         </div>
       </div>
       <button className="help-button">
@@ -236,12 +306,44 @@ const Body = () => {
     Hi, how can I help?
   </Link>
 </button>
-<div className='section-heading'>
+<div className="our-values-container">
+      <div className="banner-values">
+     <h1>
+      Our Values
+     </h1>
+      </div>
+      <div className="promise-section">
+        <h2>Our promise is this:</h2>
+        <p>
+          Our passion for the work is fueled by our care for each other. We
+          trust in our collective knowledge, always seeking elevation through
+          understanding. We humbly dive into the unknown, explore with purpose,
+          and emerge with impactful solutions. These values guide us through
+          every project, every partnership. Every time.
+        </p>
+        <a href="#join-us" className="join-us-link">JOIN US</a>
+      </div>
+      <div className='values'>
+      <div className="values-grid">
+        {values.map((value, index) => (
+          <div className="value-card" key={index}>
+            <h3>{value.title}</h3>
+            <p>{value.description}</p>
+          </div>
+        ))}
+      </div>
+      <div className='value-image'>
+        {/* <img src={`${process.env.PUBLIC_URL}/Image/values.jpg`}
+        alt='value-image' /> */}
+        </div>
+        </div>
+    </div>
+{/* <div className='section-heading'>
   <h2>
   <u>Charts we offer to clients.</u>  
   </h2>
-</div>
-<ImageList
+</div> */}
+{/* <ImageList
   sx={{
     width: { xs: '100vw', sm: '80vw', md: 1000 },
     height: { xs: 'auto', md: 650 },
@@ -261,9 +363,7 @@ const Body = () => {
       />
     </ImageListItem>
   ))}
-</ImageList>
-
-
+</ImageList> */}
     </>
   )
 }
