@@ -752,6 +752,10 @@ body {
   border-radius: 100%;
   background-color: #33353d;
 }
+.main-banner p,.link-dec p{
+  color: black;
+
+}
 
 .foot-head {
   display: flex;
@@ -1178,9 +1182,10 @@ h2 {
   color: #fff;
 }
 
+
 p {
   font-size: 1rem;
-  color: #fff;
+
   line-height: 1.5;
 }
 
@@ -1210,7 +1215,18 @@ p {
   color: black;
   padding: 10px;
 }
-
+.infos{
+  background: none;
+  margin-top: 0px;
+  padding: 0px;
+}
+#services{
+  margin-top:245px;
+}
+.section-heading p{
+  color: #c51717;
+  font-weight: bold;
+}
 /* Promise Section */
 .promise-section {
   max-width: 800px;

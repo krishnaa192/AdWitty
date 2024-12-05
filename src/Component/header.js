@@ -9,7 +9,9 @@ const Header = () => {
         <div className='navbar-main'>
             <div className='header-nav'>
                 <div className='nav-logo'>
+                <a href='/'>
                     <img src='/image/blob.png' alt='Logo' />
+                    </a>
                 </div>
                 <div
                     className={`nav-links ${menuOpen ? 'open' : ''}`}

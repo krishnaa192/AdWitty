@@ -66,7 +66,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="footer__nav-item">
-                  <a href="https://github.com/krishnaa192" className="footer__nav-link">
+                  <a href="https://www.instagram.com/ad_wittty" className="footer__nav-link">
                     <i data-feather="instagram"></i>
                     <span>Instagram</span>
                   </a>
@@ -85,7 +85,7 @@ const Footer = () => {
                     href="mailto:contact.laboiserie@gmail.com"
                     className="footer__nav-link"
                   >
-                    contact.adwitty@gmail.com
+                    addwittty@gmail.com
                   </a>
                 </li>
               </ul>

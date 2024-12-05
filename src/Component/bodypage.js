@@ -2,8 +2,6 @@ import React from 'react'
 import './body.css'
 import 'font-awesome/css/font-awesome.min.css';
 import { Link } from 'react-router-dom';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import { FaRegCalendarAlt, FaIndustry, FaChartLine, FaRocket } from "react-icons/fa";
 
 const itemData = [
@@ -182,7 +180,7 @@ const Body = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="section-heading">
-                <h2>Discover Our <em>Work</em> &amp; <span>Projects</span></h2>
+                <h2>Discover Our <em>Work</em> &amp; <span>Achievements</span></h2>
                 <div className="line-dec"></div>
                 {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p> */}
               </div>
@@ -272,23 +270,28 @@ const Body = () => {
                     <div className="skills">
                       <div className="skill-slide marketing">
                         <div className="fill"></div>
-                        <h6>Marketing</h6>
-                        <span>90%</span>
+                        <h6>Google My Business</h6>
+                 
                       </div>
                       <div className="skill-slide digital">
                         <div className="fill"></div>
-                        <h6>Digital Media</h6>
-                        <span>80%</span>
+                        <h6>Digital Marketing</h6>
+                       
                       </div>
                       <div className="skill-slide media">
                         <div className="fill"></div>
                         <h6>Social Media Managing</h6>
-                        <span>95%</span>
+                    
                       </div>
                       <div className="skill-slide media">
                         <div className="fill"></div>
                         <h6>Website Developement </h6>
-                        <span>95%</span>
+                        
+                      </div>
+                      <div className="skill-slide media">
+                        <div className="fill"></div>
+                        <h6>Search Engine Optimization</h6>
+                    
                       </div>
                     </div>
                     {/* <p className="more-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et dolore dolor dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p> */}
@@ -309,7 +312,7 @@ const Body = () => {
 <div className="our-values-container">
       <div className="banner-values">
      <h1>
-      Our Values
+    
      </h1>
       </div>
       <div className="promise-section">
@@ -321,7 +324,7 @@ const Body = () => {
           and emerge with impactful solutions. These values guide us through
           every project, every partnership. Every time.
         </p>
-        <a href="#join-us" className="join-us-link">JOIN US</a>
+        <a href="/contact" className="join-us-link">JOIN US</a>
       </div>
       <div className='values'>
       <div className="values-grid">
