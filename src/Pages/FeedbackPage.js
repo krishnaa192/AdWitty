@@ -1,17 +1,18 @@
 import React from 'react'
-import Header from '../Component/header'
+import Header from '../Component/head'
 import Footer from '../Component/Foot';
 import Feedback from '../Component/Feedback'
 
 const FeedbackPage = () => {
   return (
     <div>
-       <div>
+       <div className='header'>
         <Header/>
+        </div>
         <Feedback/>
         <Footer/>
     </div>
-    </div>
+  
   )
 }
 

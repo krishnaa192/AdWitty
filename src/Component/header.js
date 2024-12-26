@@ -1,60 +1,104 @@
-import React, { useState } from 'react';
-import './header.css';
+import React, { useState } from "react";
+import "./header.css";
 
 const Header = () => {
-    const [showDropdown, setShowDropdown] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // Mobile menu state
+  const [servicesOpen, setServicesOpen] = useState(false); // Services dropdown state
+  const [activeCategory, setActiveCategory] = useState(null);
 
-    return (
-        <div className='navbar-main'>
-            <div className='header-nav'>
-                <div className='nav-logo'>
-                <a href='/'>
-                    <img src='/image/blob.png' alt='Logo' />
-                    </a>
-                </div>
-                <div
-                    className={`nav-links ${menuOpen ? 'open' : ''}`}
-                >
-                    <a href='/'>Home</a>
-                    <a href='/about'>About</a>
-                    <div
-                        className='nav-services'
-                        onMouseEnter={() => setShowDropdown(true)}
-                        onMouseLeave={() => setShowDropdown(false)}
-                    >
-                        <a href='/services/seo'>Services</a>
-                        {showDropdown && (
-                            <div className='services-dropdown'>
-                                <div className='services-dropdown-item'>
-                                    
-                                    <a href='/services/seo'>Start Ranking Higher Today – Explore Our SEO Plans!”</a>
-                                    <a href='/services/social-media'>“Grow Your Social Presence – Let’s Start Now!”</a>
-                                    <a href='/services/google-my-business'>Google My Business </a>
-                                    <a href='/services/webdev'>Get Your Dream Website – Book a Free Consultation Now!”</a>
-                                    <a href='/services/performance-marketing'>Boost Your Campaign ROI – Talk to Our Experts!”</a>
-                                </div>
-                                
-                            </div>
-                        )}
-                    </div>
-                    {/* <a href='#'>Clients</a> */}
-                    <a href='/contact'>Contact</a>
-                    {/* <a href='/feedback'>
-                        What They Said!
-                    </a> */}
-                </div>
-               
-                {/* Hamburger Icon */}
-                <div
-                    className='nav-toggle'
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-                    &#9776;
-                </div>
-            </div>
+  const toggleCategory = (category) => {
+    setActiveCategory(activeCategory === category ? null : category);
+  };
+
+  return (
+    <div className="navbar-main">
+      <div className="header-nav">
+        <div className="nav-logo">
+          <a href="/">
+            <img src="/image/blob.png" alt="Logo" />
+          </a>
         </div>
-    );
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <div className="nav-services">
+            <button
+              className="services-button"
+              onClick={() => setServicesOpen(!servicesOpen)} // Toggle Services dropdown
+            >
+             <span>Services </span> 
+            </button>
+            {servicesOpen && (
+              <div className="services-dropdown">
+                <div className="services-category">
+                  <div
+                    className="category-header"
+                    onClick={() => toggleCategory("brand")}
+                  >
+                    <span>BRAND</span>
+                    <span>{activeCategory === "brand" ? "▾" : "▸"}</span>
+                  </div>
+                  {activeCategory === "brand" && (
+                    <div className="category-content">
+                      <a href="/services/digital-strategy">
+                        Google My Business
+                      </a>
+                      <a href="/services/seo">Search Engine Optimization</a>
+                    </div>
+                  )}
+                </div>
+                <div className="services-category">
+                  <div
+                    className="category-header"
+                    onClick={() => toggleCategory("digital")}
+                  >
+                    <span>DIGITAL</span>
+                    <span>{activeCategory === "digital" ? "▾" : "▸"}</span>
+                  </div>
+                  {activeCategory === "digital" && (
+                    <div className="category-content">
+                      <a href="/services/digital-strategy">
+                        Performance Marketing
+                      </a>
+                      <a href="/services/seo">
+                        Social Media Management
+                      </a>
+                    </div>
+                  )}
+                </div>
+                <div className="services-category">
+                  <div
+                    className="category-header"
+                    onClick={() => toggleCategory("product")}
+                  >
+                    <span>PRODUCT</span>
+                    <span>{activeCategory === "product" ? "▾" : "▸"}</span>
+                  </div>
+                  {activeCategory === "product" && (
+                    <div className="category-content">
+                      <a href="/services/product-discovery">
+                        Product Discovery
+                      </a>
+                      <a href="/services/mobile-app-design">
+                        Mobile App Design
+                      </a>
+                      <a href="/services/brand-identity">
+                        Brand Identity
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+          <a href="/contact">Contact</a>
+        </div>
+        <div className="nav-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          &#9776;
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Header;

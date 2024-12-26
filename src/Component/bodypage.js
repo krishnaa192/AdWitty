@@ -3,6 +3,8 @@ import './body.css'
 import 'font-awesome/css/font-awesome.min.css';
 import { Link } from 'react-router-dom';
 import { FaRegCalendarAlt, FaIndustry, FaChartLine, FaRocket } from "react-icons/fa";
+import "@fortawesome/fontawesome-free/css/all.css";
+
 
 const itemData = [
   {
@@ -114,7 +116,7 @@ const Body = () => {
                 <div className="line-dec"></div>
                 <h4>Dive <em>Into The Witty</em> World <span>With ADWItty</span></h4>
                 <p>
-                orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                AdWitty is the perfect platform for your business, offering customized, research-based, and growth-oriented solutions. Our team of experts will collaborate with you to understand your business goals and create a tailored strategy to achieve them. We will provide you with the tools, insights, and resources you need to succeed and drive your business forward.
                 </p>
                 <div className="main-button scroll-to-section"><Link to="/services/performance-marketing">Discover More</Link></div>
                
@@ -166,7 +168,7 @@ const Body = () => {
                     <div className="icon">
                       <img src="assets/images/services-04.jpg" alt="SEO marketing" className="templatemo-feature" />
                     </div>
-                    <h4>Advertising marketing &amp; </h4>
+                    <h4>Advertising marketing &amp; Google Bussiness </h4>
                   </div>
                 </div>
               </div>
@@ -304,11 +306,20 @@ const Body = () => {
       </div>
         </div>
       </div>
-      <button className="help-button">
-  <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+     
+<button className="help-button">
+  <a 
+    href="https://wa.me/918591255620" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}
+  >
+    <i className="fab fa-whatsapp" style={{ marginRight: '8px', fontSize: '1.2rem' }}></i>
     Hi, how can I help?
-  </Link>
+  </a>
 </button>
+
+
 <div className="our-values-container">
       <div className="banner-values">
      <h1>

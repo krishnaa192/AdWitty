@@ -1,12 +1,14 @@
 import React from 'react'
 import GoogleMyBusiness from '../Component/Services/Google'
-import Header from '../Component/header'
+import Head from '../Component/head'
 import Footer from '../Component/Foot';
 
 const GoogleMy = () => {
   return (
     <div>
-        <Header />
+      <div className='header'>
+        <Head/>
+        </div>
         <GoogleMyBusiness/>
         <Footer />
       

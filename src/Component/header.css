@@ -46,17 +46,7 @@
     position: relative;
 }
 
-.services-dropdown {
-    display: flex;
-    flex-direction: row;
-    gap: 20px; /* Space between Service 1 and Service 2 */
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
-    padding: 15px;
-    margin-top: 5px;
-    z-index: 1000;
-}
+
 
 .services-dropdown-item {
     display: flex;
@@ -69,7 +59,6 @@
 }
 
 .services-dropdown a {
-    padding: 6px 10px;
     text-decoration: none;
     color: #333;
     white-space: nowrap;
@@ -138,7 +127,8 @@
     }
 
     .nav-links.open {
-        display: flex;
+        display: flex !important
+        ;
     }
 
     .nav-toggle {
@@ -147,5 +137,325 @@
 
     .contact-btn button{
         display: none;
+    }
+}
+
+/* General Navbar Styles */
+.navbar-main {
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a,.services-button {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a45e23;
+}
+
+/* Dropdown Menu */
+.nav-services {
+    position: relative;
+}
+
+.services-dropdown {
+    position: absolute;
+    top: 100%;
+  
+    background-color: #f0f3ec;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    z-index: 5;
+    width: 600px;
+}
+
+.services-category h4 {
+    color: #a45e23;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.services-category a {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.services-category a:hover {
+    color: #a45e23;
+    text-decoration: underline;
+}
+
+/* Mobile Menu */
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links.open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f0f3ec;
+    width: 100%;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+/* Dropdown Menu */
+.services-dropdown {
+    position: absolute;
+    top: 100%; /* Position it right below the parent link */
+    right:10% !important; /* Align to the start of the window */
+    width: 86vw; /* Make it span the entire width of the viewport */
+    background-color: #f0f3ec;
+   
+    border-top: 2px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr); /* Adjust columns as needed */
+    gap: 10px;
+    z-index: 5;
+}
+
+
+
+.services-category h4 {
+    color: #a45e23;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.services-category a {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.services-category a:hover {
+    color: #a45e23;
+    text-decoration: underline;
+}
+.nav-links.open .nav-services .services-dropdown {
+    display: grid; /* Ensure dropdown is visible in open mobile menu */
+    position: relative; /* Adjust position for mobile */
+    width: auto; /* Match mobile width */
+    box-shadow: none;
+}
+/* Dropdown Menu for Mobile */
+.services-dropdown-mobile {
+    background-color: #f0f3ec;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    z-index: 10;
+}
+
+.services-category {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 16px;
+    color: #a45e23;
+    font-weight: bold;
+}
+
+.category-header span:last-child {
+    font-size: 14px;
+    color: #000;
+}
+
+.category-content {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.category-content a {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.category-content a:hover {
+    color: #a45e23;
+    text-decoration: underline;
+}
+
+/* Mobile Menu */
+.nav-links.open .nav-services {
+    display: block;
+}
+
+.nav-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+}
+.services-button{
+    border: none;
+}
+/* For desktop view */
+.nav-links {
+    display: flex;
+}
+
+.nav-links.open {
+    display: none; /* Hide links in mobile view */
+}
+
+/* For mobile view */
+.nav-toggle {
+    display: block;
+}
+
+.services-dropdown-mobile {
+    display: block; /* Only show this dropdown if servicesOpen is true */
+}
+/* Services Dropdown */
+.nav-services {
+    position: relative;
+}
+
+.services-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.services-dropdown {
+    position: absolute;
+    top: 100%; /* Position it below the button */
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    display: none; /* Hidden by default */
+}
+
+.services-dropdown .services-category {
+    border-bottom: 1px solid #ddd;
+}
+
+.services-dropdown .category-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.services-dropdown .category-content {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.services-dropdown .category-content a {
+    display: block;
+    padding: 5px 0;
+}
+
+.services-dropdown.show {
+    display: block; /* Only show when active */
+}
+
+/* For Mobile Menu */
+.nav-toggle {
+    display: block;
+}
+
+.nav-links.open {
+    display: block;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Adjust mobile styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-logo {
+        display: inline-block;
     }
 }
